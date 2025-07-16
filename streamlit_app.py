@@ -9,10 +9,7 @@ from tempfile import NamedTemporaryFile
 from langchain.schema import HumanMessage
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from PyPDF2 import PdfReader
-os.environ["GOOGLE_API_KEY"] = ""  # Gemini API 키 직접 설정
-
 GEMINI_API_KEY = os.getenv("GOOGLE_API_KEY")
-
 # 임베딩 모델
 embedding_model = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
 
